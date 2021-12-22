@@ -1,0 +1,31 @@
+<body>
+<div style="text-align: center;">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmitas(form.value)">
+
+        <button type = "button" class= "btn2"
+        (click)="home()">Home</button>
+    
+        
+        <h2>Assigning the task</h2>
+        <h2> Task ID:</h2>
+        <input type="text" name="taskid"  formControlName="taskid"/>
+
+        <br/><br/>
+
+        <h2> OWNER ID:</h2>
+         <input type="text" name="ownerid"  formControlName="ownerid"/>
+         <br/><br/>
+  
+        <button type = "button" class= "btn btn-success"
+        (click)="onSubmitas(form.value)">Assign</button>
+    
+        
+    </form>
+        
+    </div>
+
+    <div *ngFor="let n of tasks">
+
+    <h3>The Task ID {{n.taskid}} is assigned to Owner ID: {{n.ownerid}}</h3>
+    </div>

@@ -1,0 +1,36 @@
+<body >
+<div style="text-align: center;">
+
+
+    <form [formGroup]="form2" (ngSubmit)="onSubmitnotes(form2.value)">
+        <button type = "button" class= "btn2"
+        (click)="home()">Home</button>
+    
+        <h1>Welcome to Task Tracking system</h1>
+        <h2>add notes to the task</h2>
+        <h2> Notes:</h2>
+        <input type="text" name="notes"  formControlName="notes"/>
+
+        <br/><br/>
+
+        <h2> Task ID:</h2>
+        
+         <input type="text" name="taskid"  formControlName="taskid"/>
+         
+         <button type = "button" class= "btn btn-success"
+        (click)="onSubmitnotes(form2.value)">add notes</button>
+     </form>
+     </div>
+<div *ngFor="let n of tasks">
+added notes is: {{n.notes}}
+    </div>
+    <br />
+    
+
+
+    <br />
+
+
+
+    <br />
+

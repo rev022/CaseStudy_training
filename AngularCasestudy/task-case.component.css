@@ -1,0 +1,11 @@
+body{
+    background-image: url("../../assets/b.jpg");
+    color: green;
+    font-size: 20px;
+}
+
+.btn2:hover:hover{
+    opacity: 1;
+    background-color: lightcoral;
+    font-size: 30px;
+}

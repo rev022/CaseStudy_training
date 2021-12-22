@@ -1,0 +1,28 @@
+<body>
+
+<div style="text-align: center;">
+
+    <button type = "button" class= "btn2"
+        (click)="home()">Home</button>
+
+    <h2>
+
+Report of All Task    </h2>
+
+
+    <div *ngFor="let a of Tasks">
+
+        taskid is {{a.taskid}}<br />
+            ownerid is {{a.ownerid}}<br/>
+           creatorid is {{a.creatorid}}<br/>
+            taskname is {{a.name}}<br/>
+            description is {{a.descrptn}}<br/>
+            status is {{a.status}}<br/>
+            priority is {{a.priority}}<br/>
+            notes is {{a.notes}}<br/>
+            created_on is {{a.created_on}}<br/>
+            status_changed_on is {{a.status_changed_on}}<br/>
+<br />
+
+
+</div>

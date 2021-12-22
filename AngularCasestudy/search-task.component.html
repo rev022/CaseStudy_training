@@ -1,0 +1,46 @@
+<body>
+<div style="text-align: center;">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmitsearch(form.value)">
+        <button type = "button" class= "btn2"
+        (click)="home()">Home</button>
+    
+        
+        <h2>Search the task</h2>
+        <h2> Task ID:</h2>
+        <input type="text" name="taskid"  formControlName="taskid"/>
+
+        <br/><br/>
+
+  
+        <button type = "button" class= "btn btn-success"
+        (click)="onSubmitsearch(form.value)">Search Task</button>
+    
+        
+    </form>
+    <br />
+
+
+
+
+
+
+
+    <br />
+        
+    </div>
+
+    <div *ngFor="let task of tasks">
+
+        TASK ID:{{task.taskid}}<br>
+        OWNER ID:{{task.ownerid}}<br>
+        CREATOR ID:{{task.creatorid}}<br>
+        TASK NAME:{{task.name}}<br>
+        DESCRIPTION:{{task.descrptn}}<br>
+        STATUS:{{task.status}}<br>
+        PRIORITY:{{task.priority}}<br>
+        NOTES:{{task.notes}}<br>
+        CREATED_ON:{{task.created_on}}<br>
+        STATUS_CHANGED_ON:{{task.status_changed_on}}<br><br>
+    </div>
+    </body>

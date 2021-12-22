@@ -1,0 +1,49 @@
+<body>
+<div style="text-align: center;">
+
+
+    <form [formGroup]="form2" (ngSubmit)="onSubmitpri(form2.value)">
+        <button type = "button" class= "btn2"
+        (click)="home()">Home</button>
+    
+        <h1>Update priority of the task</h1>
+        
+
+        <h2> Task ID:</h2>
+        
+         <input type="text" name="taskid"  formControlName="taskid"/>
+         <br/><br/>
+
+         <h2> Priority:</h2>
+        <input type="text" name="priority"  formControlName="priority"/>
+
+        <br/><br/>
+         
+         <button type = "button" class= "btn btn-success"
+        (click)="onSubmitpri(form2.value)">Add Priority</button>
+     </form>
+     </div>
+
+
+<div>
+   
+<h2>After setting priority for task </h2>
+   
+<div *ngFor= "let a of task1">
+
+<h3>taskid is {{a.taskid}}
+    ownerid is {{a.ownerid}}<br/>
+   creatorid is {{a.creatorid}}<br/>
+    taskname is {{a.name}}<br/>
+    description is {{a.descrptn}}<br/>
+    status is {{a.status}}<br/>
+    priority is {{a.priority}}<br/>
+    notes is {{a.notes}}<br/>
+    isBookmarked is {{a.isbookmarked}}<br/>
+    created_on is {{a.created_on}}<br/>
+    status_changed_on is {{a.status_changed_on}}<br/>
+</h3>
+
+</div>
+
+</div>

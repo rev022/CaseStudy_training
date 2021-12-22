@@ -1,0 +1,102 @@
+<body>
+<div style="text-align: center;">
+
+
+    <form [formGroup]="form2" (ngSubmit)="onSubmitdel(form2.value)">
+        <button type = "button" class= "btn2"
+        (click)="home()">Home</button>
+    
+        <h1>Delete Task</h1>
+        <h2> Task ID:</h2>
+        
+         <input type="text" name="taskid"  formControlName="taskid"/>
+         
+         <br/><br/>
+         
+    
+        <button type = "button" class= "btn btn-success"
+        (click)="onSubmitdel(form2.value)">delete</button>
+    
+        
+    </form>
+    
+    
+    </div>
+    <div *ngFor="let d of tasks">
+
+        Deleted task 
+        </div>
+        <br />
+
+
+
+
+
+
+
+        <br />
+
+
+
+        <br/>
+
+
+
+        <br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br/>
+
+        </body>

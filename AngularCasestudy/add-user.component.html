@@ -1,0 +1,87 @@
+<body style="text-align: center;">
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <button type = "button" class= "btn2"
+    (click)="home()">Home</button>
+
+    <div>
+        <span class = "setup"> Add User</span>
+         <h1 class ="punchline">{{data}}</h1>
+
+    userid
+     <input type="text" name="userid" placeholder="userid" formControlName="userid"/>
+     
+     <br/>
+     username
+     <input type="text" name="username" placeholder="username" formControlName="username"/>
+     
+     <br/>
+     email
+     <input type="text" name="email" placeholder="email" formControlName="email"/>
+     
+     <br/>
+     firstname
+     <input type="text" name="fname" placeholder="fname" formControlName="fname"/>
+     
+     <br/>
+     lastname
+     <input type="text" name="lname" placeholder="lname" formControlName="lname"/>
+     
+     <br/>
+
+     phone
+     <input type="text" name="phno" placeholder="phno" formControlName="phno"/>
+     
+     <br/>
+
+     role
+     <input type="text" name="role" placeholder="role" formControlName="role"/>
+     
+     <br/>
+
+     <br/>
+     isactive<select name="isactive" formControlName="isactive">
+         <option value="true">true</option>
+         <option value="false">false</option>
+     </select>
+     <br/>
+
+     dob
+     <input type="date" name="dob" placeholder="dob" formControlName="dob"/>
+     
+     <br/>
+ 
+     
+     created_on
+     <input type="date" name="created_on" placeholder="created_on" formControlName="created_on"/>
+     <br/>
+ 
+     pwd
+     <input type="text" name="pwd" placeholder="pwd" formControlName="pwd"/>
+     
+     
+     <br/>
+     
+    <button type = "button" class= "btn btn-success"
+    (click)="onSubmit(form.value)">Add</button>
+</div>
+
+
+
+
+     
+     
+     </form>
+
+
+
+
+
+
+
+
+     <br />
+
+
+
+
+     <br />
