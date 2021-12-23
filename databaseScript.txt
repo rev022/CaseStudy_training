@@ -1,0 +1,26 @@
+Database commands
+
+
+//CREATING DATABASE
+1)create database casestudydb;
+
+2)use casestudydb
+
+
+//CREATING USER TABLE
+
+3)create table user(userid int primary key,username varchar(15),email varchar(15),fname varchar(15),lname varchar(15),
+phno bigint(10),role varchar(10),isactive boolean,dob date,created_on date, pwd varchar(33));
+
+//CREATING TASK TABLE
+4)create table task(taskid int primary key, ownerid int,creatorid int, name varchar(20),descrptn varchar(50),
+status varchar(10),priority varchar(10), notes varchar(50), isbookmarked boolean, created_on date,status_changed_on date,
+foreign key (ownerid) references user (userid),foreign key (taskid) references user (userid));
+
+//CREATING NOTIFICATION TABLE
+
+
+
+5)create table notification(notificationid int primary key, taskid int,ownerid int ,status varchar(10),created_on date,status_changed_on date,
+foreign key (taskid) references user (userid),foreign key (ownerid) references user (userid));
+
